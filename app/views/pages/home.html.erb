@@ -12,33 +12,45 @@
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3 col-md-3" >
+        <%= link_to pages_references_path do %>
           <%= image_tag "adam et eve 2.jpg", width: 250, height: 250, crop: :fill %>
             <h4><%= link_to "Références à l'histoire de l'art", pages_references_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+        <% end %>
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3" text-align="center">
+        <%= link_to pages_bestiaries_path do %>
           <%= image_tag "lapin.jpg", width: 250, height: 250, crop: :fill %>
             <h4><%= link_to "Bestiaire", pages_bestiaries_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+        <% end %>
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3" >
-        <%= image_tag "rêverie.jpg", width: 250, height: 250, crop: :fill %>
+        <%= link_to pages_portraits_path do %>
+          <%= image_tag "rêverie.jpg", width: 250, height: 250, crop: :fill %>
           <h4><%= link_to "Portraits", pages_portraits_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+        <% end %>
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3" >
-        <%= image_tag "plume.jpg", width: 250, height: 250, crop: :fill %>
+        <%= link_to pages_inspirations_path do %>
+          <%= image_tag "plume.jpg", width: 250, height: 250, crop: :fill %>
           <h4><%= link_to "Inspiration libre", pages_inspirations_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+        <% end %>
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3" >
+        <%= link_to pages_tributes_path do %>
           <%= image_tag "tutu carré.jpg", width: 250, height: 250, crop: :fill %>
             <h4><%= link_to "Hommages aux créateurs", pages_tributes_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+        <% end %>
       </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3" >
+        <%= link_to pages_explorations_path do %>
           <%= image_tag "conquete 2.jpg", width: 250, height: 250, crop: :fill %>
             <h4><%= link_to "Symbolisme", pages_explorations_path, :class=>"navbar-wagon-item navbar-wagon-link"%></h4>
+          <% end %>
       </div>
     </div>
   </div>

@@ -4,18 +4,19 @@
     <div class="row">
      <div class= "col-xs-12 col-sm-12 col-md-6">
 
-
 <!-- SlidesJS Required: Start Slides -->
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
     <div id="slides">
-      <%= image_tag "voie-lactee.jpg", width: 420, height: 850, crop: :fill %>
-      <%= image_tag "robe dior.jpg", width: 420, height: 850, crop: :fill %>
-      <%= image_tag "ange.jpg", width: 420, height: 850, crop: :fill %>
+       <%= image_tag "voie-lactee.jpg", width: 420, height: 850, crop: :fill %>
+     <%= image_tag "robe dior.jpg", width: 420, height: 850, crop: :fill %>
       <%= image_tag "musicienne.jpg", width: 420, height: 850, crop: :fill %>
+      <%= image_tag "ange.jpg", width: 420, height: 850, crop: :fill %>
     </div>
   </div>
   <!-- End SlidesJS Required: Start Slides -->
+
+
  </div>
 
       <div class= "col-xs-6 col-sm-hidden col-md-3 col-md-3" >
@@ -64,10 +65,10 @@
 </div>
 
 <script>
-   $(function() {
+ $(function() {
       $('#slides').slidesjs({
         width: 940,
-        height: 1128,
+        height: 1140,
         navigation: {
           effect: "fade"
         },
@@ -85,12 +86,7 @@
         }
       });
     });
-</script>
-
-
-<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+    </script>
 <!-- SlidesJS Required: Link to jQuery -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <!-- End SlidesJS Required -->
@@ -98,4 +94,6 @@
   <!-- SlidesJS Required: Link to jquery.slides.js -->
   <script src="http://www.slidesjs.com/examples/basic-fade/js/jquery.slides.min.js"></script>
   <!-- End SlidesJS Required -->
+
+
 

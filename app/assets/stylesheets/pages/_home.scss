@@ -238,16 +238,18 @@ align-items: stretch;
   font-size: 14px;
   outline: none;
 }
-/* Prevent the slideshow from flashing on load */
+    /* Prevent the slideshow from flashing on load */
     #slides {
       display: none
     }
 
     /* Center the slideshow */
     .container {
-      margin: 0
+      margin: 0 auto
     }
-    .slidesjs-pagination .inactive {
+
+    /* Show active item in the pagination */
+    .slidesjs-pagination .active {
       color:red;
     }
 

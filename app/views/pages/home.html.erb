@@ -1,13 +1,27 @@
 <div class="page">
 
   <div class="container-fluid">
-
-
-    <div class="row">
+<div class="row">
      <div class= "col-xs-12 col-sm-12 col-md-6">
-
-
-       <%= image_tag "musicienne.jpg", width: 620, height: 850, crop: :fill %>
+<div id="slider">
+  <!-- i put this sizer img to define the aspect ratio -->
+  <img class="sizer" src="https://dl.dropboxusercontent.com/u/198573416/codepen/sizer.gif" alt="" />
+  <article class="show">
+    <%= image_tag "voie-lactee.jpg", width: 620, height: 850, crop: :fill %>
+  </article>
+  <article>
+    <%= image_tag "robe dior.jpg", width: 620, height: 850, crop: :fill %>
+  </article>
+  <article>
+    <%= image_tag "ange.jpg", width: 620, height: 850, crop: :fill %>
+  </article>
+  <article>
+   <%= image_tag "nativité_crop.jpg", width: 620, height: 850, crop: :fill %>
+  </article>
+  <article>
+    <%= image_tag "musicienne.jpg", width: 620, height: 850, crop: :fill %>
+  </article>
+</div>
 
     </div>
 
@@ -54,4 +68,34 @@
       </div>
     </div>
   </div>
+<script>
+  ;(function(){
+  "use strict";
+
+  var $slider = $('#slider');
+  if (!$slider.length) return;
+
+  var $sliderElements = $slider.find('article'),
+      sliderElementLastIndex = $sliderElements.length - 1,
+      timer,
+      actualIndex = 0,
+      step = function() {
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          if (actualIndex < sliderElementLastIndex) {
+            actualIndex++;
+          } else {
+            actualIndex = 0;
+          }
+          $sliderElements.removeClass('show');
+          $sliderElements.eq(actualIndex).addClass('show');
+
+          step();
+        },5000);
+      };
+
+  clearTimeout(timer);
+  step();
+})();
+</script>
 </div>

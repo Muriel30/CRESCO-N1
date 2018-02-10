@@ -23,23 +23,34 @@
     <![endif]-->
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113871427-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113871427-1');
+    </script>
+
     </head>
 
     <body>
       <%= render 'shared/navbar' %>
-        <%= render 'shared/barre-liens' %>
+      <%= render 'shared/barre-liens' %>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
       <%= render 'shared/footer'%>
-      <script>
-;(function(){
-  "use strict";
 
-  var $slider = $('#slider');
-  if (!$slider.length) return;
+    <script>
+    ;(function(){
+    "use strict";
 
-  var $sliderElements = $slider.find('article'),
+    var $slider = $('#slider');
+    if (!$slider.length) return;
+
+    var $sliderElements = $slider.find('article'),
       sliderElementLastIndex = $sliderElements.length - 1,
       timer,
       actualIndex = 0,
@@ -61,8 +72,31 @@
   clearTimeout(timer);
   step();
 
-})();
-</script>
+  })();
+  </script>
+
+  <script>
+  $('.ml16').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml16 .letter',
+      translateY: [-50,0],
+      easing: "easeInElastic",
+      duration: 2000,
+      delay: function(el, i) {
+        return 300 * i;
+      }
+      }).add({
+      targets: '.ml16',
+      opacity: 0,
+      duration: 15000,
+      easing: "easeInBack",
+      delay: 8
+      });
+  </script>
   </body>
 </html>
 

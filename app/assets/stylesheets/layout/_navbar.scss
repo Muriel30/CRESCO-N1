@@ -1,6 +1,8 @@
 .banner-home {
   background-color: #394666;
   height: 140px;
+  padding-left: 10%;
+  padding-right: 10%;
   font-family: 'Asap', sans-serif;
 
 }
@@ -11,6 +13,19 @@
   position: relative;
   bottom: 20px;
   text-shadow:1px 1px 2px #51292A;
-  padding-left: 120px;
   padding-top: 70px;
+}
+
+.ml16 {
+  color: #402d2d;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  overflow: hidden;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
